@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<header id="header">
+      <a href="index2.html" class="logo">Home</a>
+</header>
+
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="All">All</li>
+        <li class="buttons" data-filter="Mob-apps">Mob-apps</li>
+        <li class="buttons" data-filter="Events">Events</li>
+        <li class="buttons" data-filter="Video-works">Video-works</li>
+        <li class="buttons" data-filter="Photo-works">Photo-works</li>
+        <li class="buttons" data-filter="SMM-projects">SMM-projects</li>
+    </ul>
+  
+    <div class="image-container">
+  
+        <a href="photo5229236233681613792.jpg" class="image Mob-apps">
+            <img src="photo5229236233681613792.jpg" alt="">
+        </a>
+        <a href="photo5229236233681613791.jpg" class="image Mob-apps">
+            <img src="photo5229236233681613791.jpg" alt="">
+        </a>
+        <a href="photo5229236233681613789.jpg" class="image Mob-apps">
+            <img src="photo5229236233681613789.jpg" alt="">
+        </a>
+  
+        <a href="photo5229236233681613790.jpg" class="image Events">
+            <img src="photo5229236233681613790.jpg" alt="">
+        </a>
+        <a href="photo5229236233681613801.jpg" class="image Events">
+          <img src="photo5229236233681613801.jpg" alt="">
+      </a>
+    
+     
+  
+        <a href="photo5229236233681613788.jpg" class="image Video-works">
+            <img src="photo5229236233681613788.jpg" alt="">
+        </a>
+        <a href="photo5229236233681613787.jpg" class="image Video-works">
+            <img src="photo5229236233681613787.jpg" alt="">
+        </a>
+        <a href="photo5229236233681613786.jpg" class="image Video-works">
+            <img src="photo5229236233681613786.jpg" alt="">
+        </a>
+       
+      
+  
+        <a href="photo5229236233681613784.jpg" class="image Photo-works">
+            <img src="photo5229236233681613784.jpg" alt="">
+        </a>
+        <a href="photo5229236233681613785.jpg" class="image Photo-works">
+            <img src="photo5229236233681613785.jpg" alt="">
+        </a>
+        
+  
+        <a href="photo5229236233681613783.jpg" class="image SMM-projects">
+            <img src="photo5229236233681613783.jpg" alt="">
+        </a>
+        <a href="photo5229236233681613782.jpg" class="image SMM-projects">
+            <img src="photo5229236233681613782.jpg" alt="">
+        </a>
+        <a href="photo5229236233681613780.jpg" class="image SMM-projects">
+            <img src="photo5229236233681613780.jpg" alt="">
+        </a>
+      
+  
+    </div>
+  
+  </div>
+  
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $('.buttons').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var filter = $(this).attr('data-filter')
+
+        if(filter == 'All'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+
+    });
+
+    $('.gallery').magnificPopup({
+
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        }
+
+    });
+
+});
+
+</script>
+    
+</body>
+</html>
+</body>
